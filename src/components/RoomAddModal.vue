@@ -7,7 +7,7 @@
                     <v-toolbar>
                     <v-btn
                         icon
-                        href=""
+                        href="/room"
                     >
                         <v-icon>mdi-arrow-left</v-icon>
                     </v-btn>

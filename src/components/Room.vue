@@ -3,13 +3,14 @@
         <v-card
             class="mx-auto"
             max-width="400"
+            height="100px"
         >
             <v-img
             class ="main"
             height="200px"
             src="http://d2u4q3iydaupsp.cloudfront.net/M9YO50StNO9wcaIKVYLMIAVeaOrWxAHoEXoIO0K1D9hMa6RlXDkuExDgDwGnn1NTP70WO5k6SoYUhqA2jEzvSp5Fj0jmHNjAWq11rOt0OA59j6pLWSEK6jEWMrGxtiG2"
             >
-            <v-card-title>My Rv</v-card-title>
+            <!-- <v-card-title><v-icon>mdi-arrow-left</v-icon> Rv</v-card-title> -->
             </v-img>
 
             <v-list >
@@ -22,7 +23,7 @@
                     <v-img :src="item.avatar"></v-img>
                 </v-list-item-avatar>
 
-                <v-list-item-content>
+                <v-list-item-content style="margin-right:80px">
                     <v-list-item-title v-html="item.title"></v-list-item-title>
                 </v-list-item-content>
                 </v-list-item>
@@ -32,7 +33,25 @@
             <v-icon>
             <span class="material-icons">add_circle</span>
             </v-icon>
-            
+          
+          <div>
+          <v-card-text >
+            <v-fab-transition >
+              <v-btn
+                color="#ffab01"
+                dark
+                right
+                fab
+                fixed 
+                bottom
+                href="/roommodal"
+              >
+                <v-icon>mdi-plus</v-icon>
+              </v-btn>
+            </v-fab-transition>
+            <!-- <h6>New Area</h6> -->
+          </v-card-text>
+          </div>
         </v-card>
     </div>
 </template>

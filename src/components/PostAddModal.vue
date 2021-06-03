@@ -7,7 +7,7 @@
                     <v-toolbar>
                     <v-btn
                         icon
-                        href=""
+                        href="/post"
                     >
                         <v-icon>mdi-arrow-left</v-icon>
                     </v-btn>

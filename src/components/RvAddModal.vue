@@ -7,7 +7,7 @@
                     <v-toolbar>
                     <v-btn
                         icon
-                        href=""
+                        href="/rv"
                     >
                         <v-icon>mdi-arrow-left</v-icon>
                     </v-btn>

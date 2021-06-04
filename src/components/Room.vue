@@ -2,7 +2,6 @@
     <div>
         <v-card
             class="mx-auto"
-            max-width="400"
             height="100px"
         >
             <v-img
@@ -10,32 +9,47 @@
             height="200px"
             src="http://d2u4q3iydaupsp.cloudfront.net/M9YO50StNO9wcaIKVYLMIAVeaOrWxAHoEXoIO0K1D9hMa6RlXDkuExDgDwGnn1NTP70WO5k6SoYUhqA2jEzvSp5Fj0jmHNjAWq11rOt0OA59j6pLWSEK6jEWMrGxtiG2"
             >
-            <!-- <v-card-title><v-icon>mdi-arrow-left</v-icon> Rv</v-card-title> -->
+              <v-fab-transition>
+              <v-btn
+                class="btn"
+                style="color:white"
+                top
+                left
+                fixed
+                small
+                light
+                href="/rv"
+              >
+                <v-icon
+                  dark
+                  left
+                >
+                  mdi-arrow-left
+                </v-icon> My Rv
+              </v-btn>
+              </v-fab-transition>
+          
             </v-img>
 
-            <v-list >
+            <v-list style="padding-top:30px" >
             <template v-for="(item) in items">
 
                 <v-list-item
                 :key="item.title"
+                
                 >
                 <v-list-item-avatar>
                     <v-img :src="item.avatar"></v-img>
                 </v-list-item-avatar>
 
-                <v-list-item-content style="margin-right:80px">
-                    <v-list-item-title v-html="item.title"></v-list-item-title>
+                <v-list-item-content style="text-align:left ; margin-left: 15px;">
+                    <strong><v-list-item-title ><a href='/post'>{{item.title}}</a></v-list-item-title></strong>
                 </v-list-item-content>
                 </v-list-item>
             </template>
             </v-list>
 
-            <v-icon>
-            <span class="material-icons">add_circle</span>
-            </v-icon>
-          
           <div>
-          <v-card-text >
             <v-fab-transition >
               <v-btn
                 color="#ffab01"
@@ -46,11 +60,10 @@
                 bottom
                 href="/roommodal"
               >
-                <v-icon>mdi-plus</v-icon>
+                <v-icon style="color:white">mdi-plus</v-icon>
               </v-btn>
             </v-fab-transition>
-            <!-- <h6>New Area</h6> -->
-          </v-card-text>
+          
           </div>
         </v-card>
     </div>
@@ -88,4 +101,31 @@ export default {
 .main {
   border-radius: 0px 0px 20px 20px;
 }
+
+a:link {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color:black;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+
+a:active {
+  color: green;
+  background-color: transparent;
+}
+
+.btn{
+  width:120px; 
+  margin: 10px 0px 0px -30px ; 
+  text-transform: capitalize;
+  background: linear-gradient(to right, #1e1f1f 63%, #f6eef1 98%); 
+}
+
+
 </style>
